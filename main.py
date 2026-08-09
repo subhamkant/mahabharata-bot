@@ -621,6 +621,11 @@ async def run_pipeline(language: str = "en", test_mode: bool = False, test_uploa
                 os.remove(ck.path("video_pre_subs.mp4"))
             except OSError:
                 pass
+        # Phase 32: predeclare so the Step-5 Shorts-cover bake also works on
+        # the checkpoint-resume path (image gen is skipped there, so these
+        # would otherwise be undefined -> NameError).
+        image_files = None
+        _ov_text = ""
         if ck.has("video_pre_subs.mp4"):
             print("\nSteps 3+4 — [resume] assembled video loaded from checkpoint")
             shutil.copy2(ck.path("video_pre_subs.mp4"), output_path)
@@ -885,6 +890,37 @@ async def run_pipeline(language: str = "en", test_mode: bool = False, test_uploa
             # frame YouTube ingests. Used for the Phase 16 D6 revival
             # render; daily cron leaves this unset for legacy behavior.
             _thumb_bake_path = os.environ.get("BAKE_THUMBNAIL_PATH", "").strip()
+            # Phase 32 (2026-08-09): AUTO-build the vertical cover when no
+            # explicit bake path was supplied. Shorts ignore API-set custom
+            # thumbnails, so without this the daily cron shipped whatever
+            # frame YouTube happened to pick — no hook text, no design. The
+            # cover is cut from the hero still already on disk (no extra
+            # image-provider call). SHORTS_COVER=false disables.
+            if (not _thumb_bake_path
+                    and os.environ.get("SHORTS_COVER", "true").strip().lower()
+                    not in ("0", "false", "no")):
+                try:
+                    from pipeline.image_generator import generate_shorts_cover
+                    _hero_still = None
+                    for _grp in (image_files or []):
+                        _cand = _grp[0] if isinstance(_grp, (list, tuple)) and _grp else _grp
+                        if _cand and os.path.exists(_cand):
+                            _hero_still = _cand
+                            break
+                    if not _hero_still:
+                        # resume path: image_files is empty — recover the hook
+                        # still straight from the checkpoint's visuals dir.
+                        import glob as _glob
+                        _cached = sorted(_glob.glob(ck.path("visuals/scene_*_shot_00.jpg")))
+                        _hero_still = _cached[0] if _cached else None
+                    if not _ov_text:
+                        _t = (script.get("title") or "").strip()
+                        _ov_text = (_t.split("|")[0].strip() if "|" in _t else _t)
+                    if _hero_still:
+                        _thumb_bake_path = generate_shorts_cover(
+                            _hero_still, _ov_text[:18]) or ""
+                except Exception as _cov_err:
+                    print(f"    [shorts-cover] skipped: {str(_cov_err)[:100]}")
             if _thumb_bake_path and os.path.exists(_thumb_bake_path):
                 _freeze_s = float(os.environ.get("BAKE_THUMBNAIL_SECONDS", "0.8"))
                 try:

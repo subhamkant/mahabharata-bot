@@ -386,6 +386,106 @@ def _cap_description_hashtags(description: str, top_n: int = 3) -> str:
     return f"{body}\n\n{' '.join(kept)}" if body else " ".join(kept)
 
 
+# ── Phase 32 SEO uplift (2026-08-09) ────────────────────────────────────────
+# Live YouTube-API forensic run 2026-08-09 against 12 same-niche channels.
+# THE GAP: our Shorts titles ran 17-34 chars of pure Hindi carrying NO
+# searchable keyword and NO hashtags ("अर्जुन का छुपा डर"), while every
+# niche winner runs 64-89 chars that ALWAYS carry the franchise keyword
+# and 2-3 in-title hashtags — e.g. Kantap News' 54M-view Short
+# "धरती पर मौजूद है महाभारत का तीन सबूत #mahadev #mahabharat #kedarnath".
+# Our median was 8 views: no discovery surface at all. Nothing in the
+# stay-rate rationale for the pure-Hindi hook requires WASTING the other
+# ~55 chars, so we keep the hook verbatim in first position (it still owns
+# the impression) and spend the remainder on keywords + hashtags.
+_TITLE_KEYWORD_TAILS = {
+    "mahabharata": ("महाभारत की कहानी", ("#Shorts", "#Mahabharat", "#महाभारत")),
+    "krishna":     ("श्रीकृष्ण कथा",   ("#Shorts", "#Krishna", "#महाभारत")),
+}
+_TITLE_MAX = 95   # YouTube hard limit is 100; leave margin.
+
+
+def _enrich_title(title: str, series: str, limit: int = _TITLE_MAX) -> str:
+    """Append searchable keyword + hashtags to a mythology Shorts title.
+
+    The LLM's Hindi curiosity hook stays FIRST and untouched (it is the
+    proven stay-rate driver and what the thumbnail overlay mirrors); this
+    only fills the unused tail. No-ops when the title already carries the
+    keyword/hashtags, for non-mythology series, or when there is no room.
+    """
+    title = (title or "").strip()
+    spec = _TITLE_KEYWORD_TAILS.get(series)
+    if not spec or not title or "#" in title:
+        return title
+    keyword, hashtags = spec
+    parts = []
+    if keyword.lower() not in title.lower():
+        parts.append(f" | {keyword}")
+    for h in hashtags:
+        # skip a hashtag whose word already appears in the hook
+        if h.lstrip("#").lower() in title.lower():
+            continue
+        parts.append(f" {h}")
+    out = title
+    for p in parts:
+        if len(out) + len(p) <= limit:
+            out += p
+    return out
+
+
+def _augment_description_seo(description: str, script_data: dict,
+                             tags: list, language: str = "hi") -> str:
+    """Insert Mahagatha's plain-keyword block above the trailing hashtags.
+
+    Mahagatha's descriptions (our best-performing SEO) carry a block of
+    20-28 comma-separated PLAIN keyphrases with no '#' — both Devanagari
+    and Roman spellings of the same query — which the automated Shorts
+    description never had. Hashtags only match hashtag search; the plain
+    block is what surfaces in normal text search. Idempotent.
+    """
+    if not description or not tags:
+        return description
+    if "\n\n" not in description and not description.strip():
+        return description
+    marker = "🔎"
+    if marker in description:
+        return description  # already augmented
+
+    # Split off the trailing hashtag-only block so keywords sit ABOVE it.
+    lines = description.rstrip().split("\n")
+    block_start = len(lines)
+    for i in range(len(lines) - 1, -1, -1):
+        s = lines[i].strip()
+        if not s:
+            block_start = i
+            continue
+        if all(tok.startswith("#") for tok in s.split()):
+            block_start = i
+            continue
+        break
+    body = "\n".join(lines[:block_start]).rstrip()
+    trailing = "\n".join(lines[block_start:]).strip()
+
+    # Plain keyphrases: dedupe, drop pure-hashtag entries, cap length.
+    seen, kws = set(), []
+    for t in tags:
+        t = (t or "").strip().lstrip("#")
+        k = t.lower()
+        if not t or k in seen:
+            continue
+        seen.add(k)
+        kws.append(t)
+        if len(kws) >= 26:
+            break
+    if not kws:
+        return description
+    kw_line = f"{marker} " + ", ".join(kws)
+
+    out = f"{body}\n\n{kw_line}" if body else kw_line
+    if trailing:
+        out = f"{out}\n\n{trailing}"
+    return out
+
+
 # ── Playlist helpers ─────────────────────────────────────────────────────────
 
 def _load_playlist_cache() -> dict:
@@ -507,10 +607,23 @@ def upload_to_youtube(
         all_tags.append(tag)
         char_budget -= cost
 
-    # Description: cap trailing hashtag block at top 3 (was 31 → suppression risk),
-    # then ensure #Shorts for Shorts algorithm classification.
+    # Description: cap the trailing hashtag block, then ensure #Shorts for
+    # Shorts algorithm classification.
+    # Phase 32 (2026-08-09): the top_n=3 cap was over-conservative. YouTube's
+    # actual rule is that MORE THAN 15 hashtags makes it ignore ALL of them —
+    # 15 is the ceiling, not 3. Mahagatha (our best-performing SEO) ships
+    # 14-18 and every niche winner runs 9-22. Keeping only 3 threw away ~10
+    # free topical-relevance signals per upload. Mythology series now keep 13
+    # (safely under the 15 cliff); other series keep the legacy 3.
     description = script_data.get("description", "")
-    description = _cap_description_hashtags(description, top_n=3)
+    _ht_keep = 13 if series in ("mahabharata", "krishna") else 3
+    description = _cap_description_hashtags(description, top_n=_ht_keep)
+    # Phase 32: append the plain-keyword block + bilingual searchable-question
+    # bullets that Mahagatha uses. This is the single biggest search-surface
+    # gap between the two channels (see _build_seo_blocks docstring).
+    if series in ("mahabharata", "krishna"):
+        description = _augment_description_seo(
+            description, script_data, all_tags, language)
     # wuxia = long-form episodes; tagging them #Shorts would be wrong.
     if "#Shorts" not in description and series != "wuxia":
         description += "\n\n#Shorts"
@@ -524,6 +637,9 @@ def upload_to_youtube(
         title = _sanitize_title(script_data["title"])[:60]
     if series == "whatif" and not title.lower().startswith("what if"):
         title = ("What If: " + title)[:60]
+    # Phase 32: spend the unused title chars on searchable keywords +
+    # in-title hashtags (mythology Shorts only). See _enrich_title.
+    title = _enrich_title(title, series)
 
     body = {
         "snippet": {

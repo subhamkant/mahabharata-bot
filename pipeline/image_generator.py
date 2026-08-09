@@ -3006,6 +3006,53 @@ def _overlay_thumbnail_text(thumb_path: str, overlay_text: str) -> bool:
         return False
 
 
+def generate_shorts_cover(
+    hero_image_path: str,
+    overlay_text: str,
+    output_path: str = "output/shorts_cover.jpg",
+) -> str | None:
+    """Phase 32 (2026-08-09) — build the VERTICAL 1080x1920 cover frame that
+    actually controls a Short's thumbnail.
+
+    THE LOOPHOLE THIS CLOSES: YouTube Shorts ignore API-uploaded custom
+    thumbnails (`thumbnails().set` is effectively a no-op for them), so the
+    1280x720 landscape thumbnail this module renders is never shown in the
+    Shorts feed. The ONLY lever is the frame YouTube ingests first — which
+    is why `prepend_thumbnail_frame` / BAKE_THUMBNAIL_PATH exists. That was
+    wired for manual dispatch only, so every cron Short shipped with an
+    undesigned, text-free auto-picked frame. Live forensic (2026-08-09)
+    confirmed the niche winners all burn their hook text INTO the frame
+    (e.g. Kantap News' 54M-view Short).
+
+    Built from the hero still already on disk (no extra provider call, no
+    quota), cover-cropped to 9:16 and given the same bold Hindi text card
+    the landscape thumbnail uses — so it reads as the video's own opening
+    frame, not a jarring title card.
+
+    Returns the cover path, or None on any failure (caller must treat the
+    bake as optional — never fail a render over a cover frame).
+    """
+    try:
+        if not hero_image_path or not os.path.exists(hero_image_path):
+            print("    [shorts-cover] no hero still available — skipping")
+            return None
+        with open(hero_image_path, "rb") as f:
+            data = f.read()
+        # Cover-fit + center-crop to exact 9:16 (reuses the provider-side helper).
+        data = _ensure_dims(data, 1080, 1920)
+        os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
+        with open(output_path, "wb") as f:
+            f.write(data)
+        if overlay_text:
+            _overlay_thumbnail_text(output_path, overlay_text)
+        print(f"    [shorts-cover] built {output_path} (1080x1920"
+              f"{', text overlay' if overlay_text else ''})")
+        return output_path
+    except Exception as e:
+        print(f"    [shorts-cover] non-fatal failure: {str(e)[:120]}")
+        return None
+
+
 def generate_thumbnail(
     thumbnail_prompt: str,
     output_path: str = "output/thumbnail.jpg",
