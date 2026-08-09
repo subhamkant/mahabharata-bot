@@ -1,0 +1,116 @@
+{
+  "ts": "2026-08-09T06-06-45",
+  "language": "hi",
+  "score": 21,
+  "score_max": 25,
+  "violation": "verb_per_frame",
+  "topic": "The moment Arjuna dropped his bow between two armies — and Krishna began the song that still guides the world, the Bhagavad Gita born on a battlefield at sunrise",
+  "title": "अर्जुन का आखिरी मोह, कृष्ण का अद्भुत दर्शन",
+  "script": {
+    "title": "अर्जुन का आखिरी मोह, कृष्ण का अद्भुत दर्शन",
+    "hook_title": "अर्जुन का आखिरी मोह",
+    "voiceover": "युद्धभूमि में काँपते अर्जुन को मिला अद्भुत दर्शन, गुरुजनों को देख उसका गांडीव हाथ से छूट जाता है। उसका हृदय भय और मोह से काँप उठता है। वह रथ पर बैठ कर फुसफुसाता है, \"हे कृष्ण, मैं इन पर बाण कैसे चलाऊँ? यह युद्ध तो विनाश लाएगा!\" लेकिन तभी, कृष्ण अपनी दिव्यता का दर्शन देते हैं, शांत स्वर में कहते हैं, \"पार्थ, कर्म कर, फल की चिंता मत कर।\" ज्ञान की ऐसी धारा फूटती है जो अर्जुन को आलोकित कर देती है। शंखनाद की ध्वनि में, कृष्ण धर्म और कर्म का गूढ़ पाठ पढ़ाते हैं, जिससे अर्जुन का भ्रम टूट जाता है। उस क्षण, एक योद्धा को जीवन का परम दर्शन मिला। क्या हम भी अपने मोह के अंधकार में ऐसे दिव्य दर्शन से वंचित रह जाते हैं?",
+    "broll": [
+      {
+        "image_prompt": "Extreme macro close-up of Arjuna's glowing Gandiva bow, crafted with gold-and-pearl inlay, slipping from his white-knuckled grip, arrow quivering, battlefield blurred in background with distant marching armies, jewel-toned palette, soft cinematic lighting, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text",
+        "anchor_phrase": "गांडीव हाथ से छूट जाता है",
+        "mood": "despairing helplessness",
+        "wardrobe_context": "WAR",
+        "shot_type": "ACTION"
+      },
+      {
+        "image_prompt": "Close-up of Arjuna's tear-streaked face, wide-eyed in anguish and despair, kohl-rimmed eyes, sweat-drenched brow, jeweled golden Kirita diadem slightly askew, battlefield smoke swirling behind him, jewel-toned palette, soft cinematic lighting, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text",
+        "anchor_phrase": "हृदय भय और मोह से काँप उठता है",
+        "mood": "intense emotional turmoil",
+        "wardrobe_context": "WAR",
+        "shot_type": "REACTION"
+      },
+      {
+        "image_prompt": "[WITNESS-FROM-BEHIND] Sweeping shot of a war chariot on Kurukshetra battlefield at sunrise, dust-choked air, Arjuna's silhouette, head bowed in despair, sitting in the chariot, Krishna, graceful powerful divine form, luminous monsoon-cloud blue skin, in the driver's seat, looking towards Arjuna with a compassionate expression, jewel-toned palette, soft cinematic lighting, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text",
+        "anchor_phrase": "रथ पर बैठ कर फुसफुसाता है",
+        "mood": "solemn, compassionate understanding",
+        "wardrobe_context": "WAR",
+        "shot_type": "AMBIGUOUS"
+      },
+      {
+        "image_prompt": "[POWER-LOOM] Krishna, graceful powerful divine form, luminous monsoon-cloud blue skin, dark curls with peacock feather, radiating a divine golden aura (tejas), eyes blazing with cosmic wisdom, golden-yellow pitambara silk, crimson sash, layered gold necklaces, towering over Arjuna, a swirling galaxy of stars and cosmic phenomena visible behind him, jewel-toned palette, soft cinematic lighting, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text",
+        "anchor_phrase": "अपनी दिव्यता का दर्शन देते हैं",
+        "mood": "awe, cosmic revelation",
+        "wardrobe_context": "DIVINE",
+        "shot_type": "AMBIGUOUS"
+      },
+      {
+        "image_prompt": "Close-up of Arjuna's face, wide-eyed, slowly shifting from despair to awe and wonder, tears still glistening, embossed golden kavacha, his mouth slightly agape, listening intently to Krishna's cosmic voice, jewel-toned palette, soft cinematic lighting, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text",
+        "anchor_phrase": "शांत स्वर में कहते हैं",
+        "mood": "mesmerized wonder, dawning realization",
+        "wardrobe_context": "WAR",
+        "shot_type": "REACTION"
+      },
+      {
+        "image_prompt": "Luminous golden stream of divine knowledge erupting from Krishna's lips, swirling outwards as ethereal light, directly impacting and illuminating Arjuna's receptive face, his eyes wide in understanding, jewel-toned palette, soft cinematic lighting, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text",
+        "anchor_phrase": "ज्ञान की ऐसी धारा फूटती है",
+        "mood": "enlightenment, intellectual awakening",
+        "wardrobe_context": "DIVINE",
+        "shot_type": "AMBIGUOUS"
+      },
+      {
+        "image_prompt": "Blazing Panchajanya conch held to Krishna's lips, emitting a radiant, resonant blast, the sound waves forming golden patterns in the sky, Krishna's luminous monsoon-cloud blue skin and peacock feather visible in soft focus behind, jewel-toned palette, soft cinematic lighting, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text",
+        "anchor_phrase": "शंखनाद की ध्वनि में",
+        "mood": "divine declaration, powerful resonance",
+        "wardrobe_context": "DIVINE",
+        "shot_type": "AMBIGUOUS"
+      },
+      {
+        "image_prompt": "Arjuna, powerfully built athletic archer, clean-jawed, jeweled golden Kirita diadem, embossed golden kavacha, eyes now clear and resolute, slowly reaching to pick up his glowing Gandiva bow, a faint smile on his lips, background a serene, golden sunrise over distant hills, not battlefield, jewel-toned palette, soft cinematic lighting, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text",
+        "anchor_phrase": "अर्जुन का भ्रम टूट जाता है",
+        "mood": "clarity, renewed purpose",
+        "wardrobe_context": "WAR",
+        "shot_type": "ACTION"
+      },
+      {
+        "image_prompt": "Fading dusk over a calm river, a lone diya flickering on the water, a serene silhouette of Arjuna with folded hands, gazing at the horizon, a quiet radiant glow of gratitude and stillness, jewel-toned palette, soft cinematic lighting, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text",
+        "anchor_phrase": "परम दर्शन मिला",
+        "mood": "peace, spiritual fulfillment",
+        "wardrobe_context": "AFTERMATH",
+        "shot_type": "ENVIRONMENT"
+      }
+    ],
+    "description": "कुरुक्षेत्र में अर्जुन ने क्यों छोड़ा अपना गांडीव?\n\nकुरुक्षेत्र के युद्ध मैदान में, जब अपनों को सामने देख अर्जुन का मन मोह और भ्रम से भर गया, तब सारथी कृष्ण ने उन्हें जीवन का सबसे बड़ा दर्शन दिया। यह सिर्फ एक युद्ध नहीं था, यह अर्जुन के अंतर्मन का संघर्ष था। कृष्ण ने अपने शब्दों से उसे धर्म, कर्म और आत्मा की अमरता का पाठ पढ़ाया, जिससे अर्जुन का मोह टूट गया। यह वह क्षण था जब श्रीमद्भगवद्गीता का जन्म हुआ, एक ऐसा ज्ञान जो आज भी हर पीढ़ी को रास्ता दिखाता है। क्या आप भी अपने जीवन के कुरुक्षेत्र में ऐसे ही मार्गदर्शन की तलाश में हैं?\n\n#Shorts #Mahabharata #महाभारत #Krishna #HinduMythology #PauranikKatha #MythologyShorts #HindiShorts",
+    "tags": [
+      "Arjuna's dilemma",
+      "Bhagavad Gita origin",
+      "Arjuna",
+      "अर्जुन",
+      "Mahabharata",
+      "महाभारत",
+      "Shorts",
+      "Hindu mythology"
+    ],
+    "thumbnail_prompt": "Vertical composition, dramatic shot of Arjuna, tear-streaked face, eyes wide with despair, dropping his glowing Gandiva bow onto the chariot floor, Krishna in background, graceful powerful divine form, luminous monsoon-cloud blue skin, radiating a divine golden halo, serene expression, blazing cosmic light erupting subtly behind him, battlefield at sunrise in the far background, high-contrast rim lighting, vibrant jewel colours, jewel-toned palette, soft cinematic lighting",
+    "quotable_line": "मोह के अंधकार में, सबसे बड़ा ज्ञान भी व्यर्थ लगता है।",
+    "pinned_question": "❓ मोह के अंधकार में, सबसे बड़ा ज्ञान भी व्यर्थ लगता है। क्या आप भी इस मोह से मुक्ति चाहते हैं?",
+    "next_seed": "और यही दर्शन कुरुक्षेत्र का भाग्य बदलेगा।",
+    "language": "hi",
+    "content_type": "story",
+    "topic": "The moment Arjuna dropped his bow between two armies — and Krishna began the song that still guides the world, the Bhagavad Gita born on a battlefield at sunrise",
+    "series": "mahabharata",
+    "episode_n": 0,
+    "arc_character_devanagari": "",
+    "arc_character_english": "devotional",
+    "_phase18_strict_pass": false,
+    "_phase18_score": 21,
+    "_phase18_score_max": 25,
+    "_phase18_score_floor": 19,
+    "_phase18_violation": "verb_per_frame",
+    "_phase18_failing_gates": [
+      "anti_merge_composition",
+      "monotony",
+      "subject_diversity",
+      "verb_per_frame"
+    ],
+    "_phase18_fatal_failures": [
+      "anti_merge_composition",
+      "verb_per_frame"
+    ]
+  }
+}
