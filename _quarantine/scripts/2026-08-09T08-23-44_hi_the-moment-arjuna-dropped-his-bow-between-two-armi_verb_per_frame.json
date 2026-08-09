@@ -1,0 +1,118 @@
+{
+  "ts": "2026-08-09T08-23-44",
+  "language": "hi",
+  "score": 19,
+  "score_max": 25,
+  "violation": "verb_per_frame",
+  "topic": "The moment Arjuna dropped his bow between two armies — and Krishna began the song that still guides the world, the Bhagavad Gita born on a battlefield at sunrise",
+  "title": "अर्जुन का कृष्ण दर्शन",
+  "script": {
+    "title": "अर्जुन का कृष्ण दर्शन",
+    "hook_title": "अर्जुन का दर्शन",
+    "voiceover": "अर्जुन का धनुष टूटती हिम्मत से गिर जाता है, जब युद्धभूमि में उसके मन का दिव्य दर्शन डोल उठता है। सामने गुरु, बंधु, पितामहों की सेना देख उसका हृदय काँप उठता है। वह कहता है, “मैं कैसे युद्ध करूँ, केशव? मेरा मन विचलित है!” कृष्ण शांत भाव से मुस्कुराते हैं, कहते हैं, “पार्थ, यह तेरी कमजोरी है, तेरा मोह। उठ, कर्म कर!” लेकिन अर्जुन की आत्मा युद्ध से मुकर जाती है। उसी क्षण, कृष्ण अपनी विराट महिमा का दिव्य दर्शन कराते हैं। कुरुक्षेत्र की भूमि, काल और ब्रह्मांड उनके अंदर समा जाते हैं। अर्जुन भय से थर्रा उठता है, फिर कृतज्ञता से हाथ जोड़ लेता है। क्या हम भी अपने सबसे बड़े संकट में ऐसे ही दिव्य दर्शन की प्रतीक्षा करते हैं, जैसे अर्जुन ने पाया था?",
+    "broll": [
+      {
+        "image_prompt": "Extreme macro close-up of Arjuna's Gandiva bow falling to dust-choked earth, intricately carved gold-and-pearl inlay, crimson silk bowstring slack and trembling, blurred battlefield behind, jewel-toned palette, soft cinematic lighting, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text.",
+        "anchor_phrase": "अर्जुन का धनुष टूटती",
+        "mood": "Despair, dropping, heavy",
+        "wardrobe_context": "WAR",
+        "shot_type": "ACTION"
+      },
+      {
+        "image_prompt": "Close-up of Arjuna's tear-streaked face, kohl-rimmed eyes wide with anguish and confusion, jeweled golden Kirita diadem slightly askew, war dust on his handsome features, jewel-toned palette, soft cinematic lighting, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text.",
+        "anchor_phrase": "हृदय काँप उठता है",
+        "mood": "Anguish, confusion, despair",
+        "wardrobe_context": "WAR",
+        "shot_type": "REACTION"
+      },
+      {
+        "image_prompt": "[WITNESS-FROM-BEHIND] Sweeping cinematic shot from behind Arjuna's shoulder, Arjuna (powerfully built athletic archer, clean-jawed with neat dark mustache, jeweled golden Kirita diadem, embossed golden kavacha, indigo-and-white silk dhoti) slumped in his chariot seat, looking out at the vast opposing army, Krishna (graceful powerful divine form, luminous monsoon-cloud blue skin, dark curls with peacock feather, golden-yellow pitambara silk) calmly observing him, jewel-toned palette, soft cinematic lighting, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text.",
+        "anchor_phrase": "मेरा मन विचलित है!",
+        "mood": "Overwhelmed, pleading, vulnerable",
+        "wardrobe_context": "WAR",
+        "shot_type": "ENVIRONMENT"
+      },
+      {
+        "image_prompt": "[CONFRONTATION-WIDE] Krishna (graceful powerful divine form, luminous monsoon-cloud blue skin, dark curls with peacock feather, golden-yellow pitambara silk, crimson sash, layered gold necklaces, divine charioteer) in his war chariot, calm and smiling gently, turning slightly towards Arjuna (powerfully built athletic archer, clean-jawed with neat dark mustache, jeweled golden Kirita diadem, embossed golden kavacha, indigo-and-white silk dhoti) who sits distraught beside him, sun rising over the distant battlefield, jewel-toned palette, soft cinematic lighting, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text.",
+        "anchor_phrase": "कृष्ण शांत भाव से मुस्कुराते हैं",
+        "mood": "Calm, reassuring, divine wisdom",
+        "wardrobe_context": "WAR",
+        "shot_type": "ENVIRONMENT"
+      },
+      {
+        "image_prompt": "Arjuna recoiling dramatically in his chariot, hands raised in a gesture of refusal, body tense with internal conflict, battle-stained crimson silk dhoti, embossed golden kavacha, distant, dusty battlefield blurring behind him, jewel-toned palette, soft cinematic lighting, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text.",
+        "anchor_phrase": "अर्जुन की आत्मा युद्ध से",
+        "mood": "Refusal, inner turmoil, conflict",
+        "wardrobe_context": "WAR",
+        "shot_type": "ENVIRONMENT"
+      },
+      {
+        "image_prompt": "Krishna's body beginning to expand and glow with an intense, radiant golden light, cosmic energies surging from his form, celestial light erupting around him, peacock feather slightly displaced, graceful powerful divine form, luminous monsoon-cloud blue skin, jewel-toned palette, soft cinematic lighting, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text.",
+        "anchor_phrase": "कृष्ण अपनी विराट महिमा का",
+        "mood": "Awe, wonder, transformation",
+        "wardrobe_context": "DIVINE",
+        "shot_type": "AMBIGUOUS"
+      },
+      {
+        "image_prompt": "[POWER-LOOM] Wide cinematic shot of Krishna's towering, blazing Vishwaroop, a thousand incandescent suns swirling within his cosmic form, galaxies, planets, and countless divine beings visible within his body, Arjuna (powerfully built athletic archer) on his knees in the foreground, shielding his eyes in profound reverence and awe, jewel-toned palette, soft cinematic lighting, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text.",
+        "anchor_phrase": "ब्रह्मांड उनके अंदर समा जाते हैं",
+        "mood": "Cosmic, overwhelming, divine",
+        "wardrobe_context": "DIVINE",
+        "shot_type": "AMBIGUOUS"
+      },
+      {
+        "image_prompt": "Close-up of Arjuna's face, wide-eyed with fear and awe, tears streaming from his kohl-rimmed eyes, profoundly humbled, golden Kirita diadem, embossed golden kavacha shimmering with reflected divine light, jewel-toned palette, soft cinematic lighting, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text.",
+        "anchor_phrase": "अर्जुन भय से थर्रा उठता है",
+        "mood": "Fear, awe, humility",
+        "wardrobe_context": "DIVINE",
+        "shot_type": "REACTION"
+      },
+      {
+        "image_prompt": "Fading dusk over a calm river, a serene silhouette of Arjuna (powerfully built athletic archer, clean-jawed with neat dark mustache, jeweled golden Kirita diadem) with folded hands, head slightly bowed in gratitude and reverence, a soft radiant glow surrounding him, lone diya flickering on the water, jewel-toned palette, soft cinematic lighting, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text.",
+        "anchor_phrase": "कृतज्ञता से हाथ जोड़ लेता है",
+        "mood": "Peace, gratitude, reverence",
+        "wardrobe_context": "AFTERMATH",
+        "shot_type": "AMBIGUOUS"
+      }
+    ],
+    "description": "कुरुक्षेत्र में जब अर्जुन ने युद्ध से इंकार किया, तब क्या हुआ?\n\nयुद्धभूमि में अपने ही परिजनों को देखकर अर्जुन का हृदय विचलित हो गया। उसने अपना गांडीव धनुष त्याग दिया, युद्ध करने से इनकार कर दिया। यह उसके लिए एक धर्मसंकट था, एक ऐसी चुनौती जहाँ धर्म और मोह का संघर्ष चरम पर था। तभी, सारथी बने भगवान कृष्ण ने उसे जीवन का सबसे बड़ा ज्ञान दिया, भगवद् गीता का उपदेश। कृष्ण ने उसे अपना विराट स्वरूप दिखाया, ब्रह्मांड के हर कण को अपने भीतर समाए हुए। इस दिव्य दर्शन ने अर्जुन के मन से सारा मोह और भय मिटा दिया, उसे अपने कर्तव्य की राह दिखाई। यह सिर्फ युद्ध का उपदेश नहीं था, बल्कि आत्मा के शाश्वत सत्य का बोध था।\n\n#Shorts #Mahabharata #महाभारत #Krishna #HinduMythology #PauranikKatha #MythologyShorts #HindiShorts",
+    "tags": [
+      "Arjuna",
+      "Krishna",
+      "Bhagavad Gita",
+      "Kurukshetra",
+      "कृष्ण",
+      "अर्जुन",
+      "महाभारत",
+      "Shorts",
+      "Hindu mythology"
+    ],
+    "thumbnail_prompt": "Arjuna (powerfully built athletic archer, clean-jawed with neat dark mustache, jeweled golden Kirita diadem, embossed golden kavacha, indigo-and-white silk dhoti) kneeling in profound awe, shielding his eyes, while Krishna (graceful powerful divine form, luminous monsoon-cloud blue skin, dark curls with peacock feather, golden-yellow pitambara silk, crimson sash) towers above him in his blazing Vishwaroop, a radiant golden halo emanating from Krishna, galaxies swirling within his cosmic form, high-contrast rim lighting, vibrant jewel colours, vertical composition with Krishna's divine figure large, battlefield in background. no hands in frame, no text.",
+    "quotable_line": "जब मोह अहंकार से बड़ा होता है, तब ही कृपा मिलती है।",
+    "pinned_question": "❓ जब मोह अहंकार से बड़ा होता है, तब ही कृपा मिलती है। क्या आप भी ऐसे ही किसी संकट में हैं?",
+    "next_seed": "और यही ज्ञान अर्जुन को महान योद्धा बनाएगा।",
+    "language": "hi",
+    "content_type": "story",
+    "topic": "The moment Arjuna dropped his bow between two armies — and Krishna began the song that still guides the world, the Bhagavad Gita born on a battlefield at sunrise",
+    "series": "mahabharata",
+    "episode_n": 0,
+    "arc_character_devanagari": "",
+    "arc_character_english": "devotional",
+    "_phase18_strict_pass": false,
+    "_phase18_score": 19,
+    "_phase18_score_max": 25,
+    "_phase18_score_floor": 19,
+    "_phase18_violation": "verb_per_frame",
+    "_phase18_failing_gates": [
+      "engagement",
+      "intensity",
+      "monotony",
+      "subject_diversity",
+      "subject_lock",
+      "verb_per_frame"
+    ],
+    "_phase18_fatal_failures": [
+      "verb_per_frame"
+    ]
+  }
+}
