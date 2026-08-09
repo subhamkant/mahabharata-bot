@@ -2367,7 +2367,8 @@ OUTPUT — return ONLY valid JSON, no markdown fences, no preamble:
   "thumbnail_prompt": "<ONE dramatic STORY-EVENT frame, never a static portrait (2026-07-14, winner-thumbnail forensic): the protagonist MID-ACTION at the story's peak moment with the antagonist or consequence VISIBLE in the same frame (e.g. Krishna mid-stride hurling the blazing Sudarshan chakra at the crocodile while the elephant struggles in the water — an EVENT you can read in half a second). Divine characters get a radiant golden halo glow; weapons/miracles BLAZE with light; high-contrast rim lighting; vibrant jewel colours; vertical composition with the main figure large>",
   "quotable_line": "<≤14 words Hindi, tribal-split moral claim. MUST contain at least one charged word (बलिदान/ज़िद/धोखा/मजबूरी/गलती/पाप/अपमान/झूठ/सच/विश्वासघात/घमंड/खत्म).>",
   "pinned_question": "<❓ {{quotable_line}} + one-line invitation to take a side in Hindi.>",
-  "next_seed": "<≤12 words Hindi, named-future-consequence hook (e.g. 'और यही प्रतिज्ञा एक दिन हस्तिनापुर को तोड़ देगी').>"
+  "next_seed": "<≤12 words Hindi, named-future-consequence hook (e.g. 'और यही प्रतिज्ञा एक दिन हस्तिनापुर को तोड़ देगी').>",
+  "seo_questions": "<Array of EXACTLY 5 strings. Each = one LITERAL SEARCH QUERY a real viewer would type about THIS story, written as 'हिंदी प्रश्न? / English question?' (Hindi first, then ' / ', then the SAME question in English). These are NOT taglines — they must read like typed searches and must name the actual characters/objects of this story. GOOD: 'कर्ण ने हस्तिनापुर का सिंहासन क्यों ठुकराया? / Why did Karna refuse the throne of Hastinapura?' | 'अर्जुन ने द्रुपद को क्यों बांधा? / Why did Arjuna capture king Drupada?'. BAD (vague, not searchable): 'क्या सच्चाई है? / What is the truth?'>"
 }}
 """.strip()
 

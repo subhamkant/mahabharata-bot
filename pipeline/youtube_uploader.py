@@ -480,7 +480,32 @@ def _augment_description_seo(description: str, script_data: dict,
         return description
     kw_line = f"{marker} " + ", ".join(kws)
 
-    out = f"{body}\n\n{kw_line}" if body else kw_line
+    # Mahagatha block 3 — searchable-question bullets. Each bullet is a
+    # LITERAL viewer search query in "Hindi? / English?" form, so the
+    # description matches long-tail queries the hook line never could.
+    # Optional: skipped silently when the LLM omitted seo_questions.
+    q_block = ""
+    raw_q = script_data.get("seo_questions") or []
+    if isinstance(raw_q, str):
+        raw_q = [ln for ln in raw_q.split("\n") if ln.strip()]
+    bullets = []
+    for q in raw_q[:6]:
+        q = (q or "").strip().lstrip("•").strip()
+        if len(q) > 8:
+            bullets.append(f"• {q}")
+    if bullets:
+        head = ("इस वीडियो में / In this video:" if language == "hi"
+                else "In this video:")
+        q_block = head + "\n" + "\n".join(bullets)
+
+    # Mahagatha block 5 — scripted CTA. Kept short (Shorts descriptions are
+    # mostly unread; this exists for the subscribe nudge + cadence promise).
+    cta = ("🔱 हर दिन महाभारत की एक अनसुनी कथा — Subscribe करें!"
+           if language == "hi" else
+           "🔱 An untold Mahabharata story every day — Subscribe!")
+
+    parts = [p for p in (body, q_block, cta, kw_line) if p]
+    out = "\n\n".join(parts)
     if trailing:
         out = f"{out}\n\n{trailing}"
     return out
