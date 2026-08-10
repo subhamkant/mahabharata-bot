@@ -1,0 +1,119 @@
+{
+  "ts": "2026-08-10T04-26-52",
+  "language": "hi",
+  "score": 18,
+  "score_max": 25,
+  "violation": "verb_action",
+  "topic": "The terrifying truth of Bhishma's birth — Ganga drowning her seven newborn sons under a celestial curse, and the father whose plea saved the eighth child",
+  "title": "भीष्म का असली श्राप",
+  "script": {
+    "voiceover": "नदी के जल में माँ अपने बच्चों को बहाती है। गंगा अपने सात पुत्रों को जन्म देती और उस पानी में डुबो देती। हर शिशु की साँसें थम जातीं, शांतनु की आँखें नम। यह एक भयानक कर्तव्य था। लेकिन जब आठवें पुत्र का जन्म हुआ, शांतनु का धैर्य टूट गया। उसने गंगा का हाथ पकड़कर चीखते हुए पूछा, \"क्या यही तेरा प्रेम है? मेरे पुत्रों को क्यों मार रही हो?\" गंगा की आँखें शांत थीं, पर भीतर एक तूफान था। उसने शाप का रहस्य बताया, पर एक शर्त रखी। \"मैं इसे जीवित रखूँगी,\" उसने शांतनु से कहा, \"पर यह हमेशा मेरा रहेगा।\" उस जन्म के बाद, क्या शांतनु ने जीवनभर उसी अनकहे दुख में अपने पुत्र को पाया?",
+    "broll": [
+      {
+        "image_prompt": "Extreme macro close-up of a dark river's surface, rippling with cold moonlit silver-blue light, a newborn infant's tiny hand reaching weakly upwards from the water, blurred dark river background, cool moonlit silver-blue palette, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text",
+        "anchor_phrase": "बच्चों को बहाती",
+        "mood": "desperate, tragic, somber",
+        "wardrobe_context": "DIVINE",
+        "shot_type": "ACTION"
+      },
+      {
+        "image_prompt": "Wide shot of a dark, swirling river, ancient trees lining the moonlit banks, graceful Ganga releasing a newborn infant into the cold water, luminous white-gold skin, long flowing dark hair, sorrowful kohl-rimmed eyes, white-and-silver silk sari draped elegantly but mournfully, dim shadow-heavy frame, cool moonlit silver-blue palette, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text",
+        "anchor_phrase": "पुत्रों को जन्म देती",
+        "mood": "grieving, resigned, heartbreaking",
+        "wardrobe_context": "DIVINE",
+        "shot_type": "ENVIRONMENT"
+      },
+      {
+        "image_prompt": "Tight close-up of a royal chamber, dimly lit by cold pre-dawn moonlight, King Shantanu gripping his own hair in anguish, his tear-streaked face wide-eyed with horror, noble features, regal white-and-silver silk dhoti slightly wet, chest heaving, cool moonlit silver-blue palette, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text",
+        "anchor_phrase": "शांतनु की आँखें नम",
+        "mood": "agony, despair, silent scream",
+        "wardrobe_context": "PALACE",
+        "shot_type": "ACTION"
+      },
+      {
+        "image_prompt": "[CONFRONTATION-WIDE] Wide shot of a dark, moonlit riverbank, ancient trees silhouetted against a silver sky, Ganga stands stoically in the foreground while King Shantanu recoils in horror, his body trembling, a tiny bundle implied in her hands, Ganga: luminous white-gold skin, white-and-silver silk sari; King Shantanu: regal white-and-silver silk dhoti, tormented expression, cool moonlit silver-blue palette, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text",
+        "anchor_phrase": "भयानक कर्तव्य था",
+        "mood": "eerie, foreboding, solemn",
+        "wardrobe_context": "DIVINE",
+        "shot_type": "ENVIRONMENT"
+      },
+      {
+        "image_prompt": "[POWER-LOOM] Sweeping view of a desolate moonlit riverbank, ancient stones worn by time, King Shantanu pleading with desperate anguish, kneeling before the majestic Ganga, King Shantanu: regal white-and-silver silk dhoti, tear-streaked face, clutching hand; Ganga: luminous white-gold skin, serene yet tragic expression, white-and-silver silk sari, cool moonlit silver-blue palette, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text",
+        "anchor_phrase": "शांतनु का धैर्य",
+        "mood": "desperate plea, quiet sorrow",
+        "wardrobe_context": "PALACE",
+        "shot_type": "ACTION"
+      },
+      {
+        "image_prompt": "A quiet, moonlit riverbank, reflected silver light on calm water, Ganga's face, serene yet subtly anguished, her kohl-rimmed eyes betraying a deep internal struggle, silver-streaked dark hair, white-and-silver silk sari draped, cool moonlit silver-blue palette, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text",
+        "anchor_phrase": "गंगा की आँखें शांत",
+        "mood": "stoic, tormented, powerful",
+        "wardrobe_context": "DIVINE",
+        "shot_type": "AMBIGUOUS"
+      },
+      {
+        "image_prompt": "Extreme close-up view, soft cold moonlight illuminating a delicate scene, Ganga gently cradling a single newborn infant (Bhishma) wrapped in white silk, his eyes gently closed, Ganga (implied, background blur), infant Bhishma: delicate features, cool moonlit silver-blue palette, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text",
+        "anchor_phrase": "इसे जीवित रखूँगी",
+        "mood": "tender, fragile, poignant",
+        "wardrobe_context": "DIVINE",
+        "shot_type": "AMBIGUOUS"
+      },
+      {
+        "image_prompt": "[WITNESS-FROM-BEHIND] Wide shot of a desolate riverbank at fading dusk, silhouettes of ancient trees against the horizon, a lone figure (Ganga with infant) walking away into the distance, as King Shantanu watches with pensive posture, Ganga: silhouette, King Shantanu: regal white-and-silver silk dhoti, back-of-head foreground, cool moonlit silver-blue palette, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text",
+        "anchor_phrase": "जीवनभर उसी अनकहे",
+        "mood": "regretful, desolate, silent burden",
+        "wardrobe_context": "AFTERMATH",
+        "shot_type": "ENVIRONMENT"
+      }
+    ],
+    "title": "भीष्म का असली श्राप",
+    "hook_title": "भीष्म का श्राप",
+    "description": "▶️ अगला भाग: Amba's revenge, Bhishma's biggest mistake\n\nगंगा ने क्यों बहाए अपने ही सात बच्चे?\nमहाभारत में भीष्म के जन्म की कहानी, जहाँ देवव्रत की माँ गंगा अपने ही सात नवजात पुत्रों को नदी में डुबो देती है। एक शाप के कारण बंधे इस भयानक कृत्य ने राजा शांतनु को तोड़ दिया, और उनके आग्रह पर गंगा ने आठवें पुत्र को जीवित छोड़ दिया - पर एक शर्त के साथ। यह कहानी सिर्फ एक जन्म की नहीं, बल्कि एक ऐसे दुख की नींव है जिसने भीष्म के जीवन को हमेशा के लिए बदल दिया।\n#Shorts #Mahabharata #महाभारत #Krishna #HinduMythology #PauranikKatha #MythologyShorts #HindiShorts",
+    "tags": [
+      "Bhishma's birth",
+      "Ganga curse",
+      "King Shantanu",
+      "भीष्म",
+      "शांतनु",
+      "Mahabharata",
+      "महाभारत",
+      "Shorts",
+      "Hindu mythology"
+    ],
+    "thumbnail_prompt": "Dramatic vertical shot, Ganga (luminous white-gold skin, sorrowful kohl-rimmed eyes, white-and-silver silk sari) mid-action releasing a newborn infant (Bhishma) into the swirling, moonlit river, King Shantanu (anguished, tear-streaked face, regal white-and-silver silk dhoti) in the background recoiling in horror, high-contrast rim lighting, cool moonlit silver-blue palette, vibrant jewel colors, vertical composition with Ganga large in the frame, no hands in frame, no text, no letters, no watermarks, no signage, no captions, no banners with writing, no overlay text",
+    "quotable_line": "जिसने जीवन दिया, उसी माँ ने ज़िद में प्राण भी लिए।",
+    "pinned_question": "❓ जिसने जीवन दिया, उसी माँ ने ज़िद में प्राण भी लिए। क्या यह धर्म था या मजबूरी?",
+    "next_seed": "और यही नींव थी भीष्म के सबसे बड़े पछतावे की।",
+    "seo_questions": [
+      "गंगा ने अपने बच्चों को क्यों डुबोया? / Why did Ganga drown her children?",
+      "भीष्म के माता-पिता कौन थे? / Who were Bhishma's parents?",
+      "राजा शांतनु और गंगा की कहानी क्या है? / What is the story of King Shantanu and Ganga?",
+      "देवव्रत (भीष्म) का जन्म कैसे हुआ? / How was Devavrata (Bhishma) born?",
+      "गंगा ने अपने पुत्रों को मारने का क्या कारण बताया? / What reason did Ganga give for killing her sons?"
+    ],
+    "language": "hi",
+    "content_type": "story",
+    "topic": "The terrifying truth of Bhishma's birth — Ganga drowning her seven newborn sons under a celestial curse, and the father whose plea saved the eighth child",
+    "series": "mahabharata",
+    "episode_n": 28,
+    "arc_character_devanagari": "भीष्म",
+    "arc_character_english": "Bhishma — The Vow That Doomed a Dynasty",
+    "_phase18_strict_pass": false,
+    "_phase18_score": 18,
+    "_phase18_score_max": 25,
+    "_phase18_score_floor": 19,
+    "_phase18_violation": "verb_action",
+    "_phase18_failing_gates": [
+      "char_names",
+      "hook",
+      "intensity",
+      "subject_lock",
+      "tha_tic",
+      "verb_action",
+      "verb_per_frame"
+    ],
+    "_phase18_fatal_failures": [
+      "verb_per_frame"
+    ]
+  }
+}

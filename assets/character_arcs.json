@@ -88,6 +88,16 @@
             "stage2_dedup"
           ],
           "llm_quality_tier": "fast"
+        },
+        {
+          "topic": "Arjuna's hidden doubt protecting Duryodhana — his dharma-bound loyalty saving his greatest enemy from the Gandharvas, the reluctant warrior's glory in a conflicted duty.",
+          "source": "auto_expansion_v21",
+          "added_at": "2026-08-10T04:17:30.135692+00:00",
+          "validated_passes": [
+            "semantic_gate",
+            "stage2_dedup"
+          ],
+          "llm_quality_tier": "fast"
         }
       ]
     },
