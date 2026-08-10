@@ -45,7 +45,30 @@ on:
   #               The winners era (May 7 - Jun 8) was daily. Consistency
   #               is the algorithmic trust signal; quarantine gate makes
   #               daily safe (bad days = silent no-op, never bad publish).
-  schedule:
+  # ════════════════════════════════════════════════════════════════════════
+  # 🛑 2026-08-10 (USER DIRECTIVE): DAILY PUBLISHING STOPPED — "stop
+  # uploading the videos, this is not working."
+  #
+  # All three cron ticks are commented out below, so NOTHING renders or
+  # uploads automatically. workflow_dispatch still works for manual/private
+  # test renders (and defaults to yt_privacy=private).
+  #
+  # WHY (measured, 2026-08-09 — see the Phase 32 forensic):
+  #   - 80 videos, 47 subs, median 14.5 views/video.
+  #   - Retention is NOT the problem: channel median AVD 73% (pure-Hindi
+  #     titles even hit 82.6%). The content lands for whoever sees it.
+  #   - DISCOVERY is the problem. Distribution never happened.
+  #   - The Phase 32 metadata fixes (title keywords + hashtags, 13 hashtags,
+  #     plain-keyword block, question bullets, real Shorts cover frame) are
+  #     shipped but UNPROVEN — they never got a cron run under them.
+  #
+  # TO RE-ENABLE: uncomment the `- cron:` lines below. Recommended first
+  # step instead: a few manual `workflow_dispatch` runs (yt_privacy=private)
+  # to sanity-check the new metadata/cover before resuming a daily cadence,
+  # and consider the topic-selection pivot (obscure curiosity-bomb topics)
+  # rather than resuming the same famous-character-emotion topics.
+  # ════════════════════════════════════════════════════════════════════════
+  # schedule:
     # 2026-07-10 (user directive): RENDER in the morning, go LIVE at 18:00
     # IST via YouTube scheduled publishing (YT_PUBLISH_AT_IST in the
     # action). 02:30 UTC = 8:00 AM IST render slot — GitHub's cron lag
@@ -56,7 +79,7 @@ on:
     # :00/:30 marks also arrived 24-90 min late). Odd minutes fare better
     # per GitHub's own docs. Publish time is unaffected either way (18:00
     # IST publishAt) — this only widens the Studio review window.
-    - cron: "43 2 * * *"
+    # - cron: "43 2 * * *"   # 🛑 disabled 2026-08-10 (user: stop uploading)
     # BACKUP TICKS (2026-07-06). GitHub schedule events are best-effort:
     # the 2026-07-06 12:15 tick was silently DROPPED (no run created;
     # workflow active, GitHub status green) and the 07-05 tick fired 1h55m
@@ -66,8 +89,8 @@ on:
     # whether today's public video already exists (one YT API call) and
     # exits in ~seconds when the primary tick succeeded, so extra ticks
     # cost no render quota on normal days.
-    - cron: "7 5 * * *"
-    - cron: "37 7 * * *"
+    # - cron: "7 5 * * *"   # 🛑 disabled 2026-08-10 (user: stop uploading)
+    # - cron: "37 7 * * *"   # 🛑 disabled 2026-08-10 (user: stop uploading)
   workflow_dispatch:
     inputs:
       target:
